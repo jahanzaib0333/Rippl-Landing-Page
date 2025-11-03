@@ -1,58 +1,29 @@
 import React, { useState, useCallback, useEffect } from 'react';
 
-// Simple Landing Page component since the file is missing
+// TEMPORARY COMPONENTS - Replace these with your actual component files later
 const LandingPage: React.FC<{ onSignupSuccess: () => void }> = ({ onSignupSuccess }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
-      <div className="text-center text-white max-w-2xl">
-        <h1 className="text-5xl font-bold mb-6">Your Daily Dose of Happy 🌊</h1>
-        <p className="text-xl mb-8">
-          Rippl turns small acts of kindness into a fun, joyful habit. 
-          Spark happiness for yourself and others with daily micro-kindness missions.
-        </p>
-        
-        <img 
-          src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&h=300&fit=crop" 
-          alt="Kindness in action"
-          className="w-full max-w-md mx-auto rounded-2xl shadow-2xl mb-8"
-        />
-        
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Landing Page Placeholder</h1>
+        <p className="mb-4">Your LandingPage component will appear here once you create the file.</p>
         <button 
           onClick={onSignupSuccess}
-          className="bg-yellow-400 text-gray-900 font-bold py-4 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors"
+          className="bg-blue-500 text-white px-6 py-3 rounded"
         >
-          Join the Waitlist! 🎉
+          Continue to Thank You Page
         </button>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="text-center">
-            <div className="text-3xl mb-2">🎮</div>
-            <h3 className="font-bold">Gamified</h3>
-            <p>Earn points and build streaks</p>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl mb-2">💫</div>
-            <h3 className="font-bold">Beautiful</h3>
-            <p>Stunning themes & animations</p>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl mb-2">🌊</div>
-            <h3 className="font-bold">Impactful</h3>
-            <p>Create real ripples of change</p>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-// Simple Admin Page component since the file is missing
 const AdminPage: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md text-center">
-        <h1 className="text-2xl font-bold mb-4">Admin Panel</h1>
-        <p className="mb-4">Admin features will be available soon.</p>
+        <h1 className="text-2xl font-bold mb-4">Admin Panel Placeholder</h1>
+        <p className="mb-4">Your AdminPage component will appear here once you create the file.</p>
         <button 
           onClick={onGoHome}
           className="bg-blue-500 text-white px-4 py-2 rounded"
@@ -64,13 +35,14 @@ const AdminPage: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => {
   );
 };
 
-// Simple Checkmark Icon component since the file is missing
 const CheckmarkIcon: React.FC = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
     <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
+// END TEMPORARY COMPONENTS
 
+// YOUR ORIGINAL CODE BELOW - UNCHANGED
 const Confetti: React.FC = () => {
     const confettiColors = ['#fde047', '#86efac', '#818cf8', '#f472b6'];
     const confettiCount = 50;
@@ -80,7 +52,7 @@ const Confetti: React.FC = () => {
             {Array.from({ length: confettiCount }).map((_, i) => (
                 <div
                     key={i}
-                    className="absolute animate-bounce"
+                    className="confetti"
                     style={{
                         left: `${Math.random() * 100}%`,
                         backgroundColor: confettiColors[Math.floor(Math.random() * confettiColors.length)],
@@ -96,8 +68,12 @@ const Confetti: React.FC = () => {
 };
 
 const HighFiveIllustration = () => (
-    <div className="text-6xl mb-4">🙌</div>
-);
+     <svg width="120" height="120" viewBox="0 0 120 120" className="mx-auto">
+        <path d="M42,10 C42,10 60,0 70,10 C80,20 85,40 80,50 C75,60 60,70 50,70 C40,70 30,60 30,50 C30,40 30,25 42,10 Z" fill="#facc15" transform="rotate(-30, 55, 40)" />
+        <path d="M78,10 C78,10 60,0 50,10 C40,20 35,40 40,50 C45,60 60,70 70,70 C80,70 90,60 90,50 C90,40 90,25 78,10 Z" fill="#c084fc" transform="rotate(30, 65, 40) translate(0, 20)" />
+        <text x="50%" y="95%" textAnchor="middle" fontSize="24" fill="#475569">🙌</text>
+    </svg>
+)
 
 const ThankYouPage: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => {
     const [copied, setCopied] = useState(false);
@@ -170,11 +146,12 @@ const ThankYouPage: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => {
 
 const FloatingShapes: React.FC = () => (
     <>
-        <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-cyan-500/20 rounded-full animate-bounce -z-10"></div>
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-fuchsia-500/20 rounded-3xl animate-bounce -z-10" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-indigo-500/20 rounded-full animate-bounce -z-10" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-cyan-500/20 rounded-full float -z-10"></div>
+        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-fuchsia-500/20 rounded-3xl float -z-10" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-indigo-500/20 rounded-full float -z-10" style={{ animationDelay: '4s' }}></div>
     </>
 );
+
 
 const App: React.FC = () => {
     const [page, setPage] = useState<'landing' | 'thankyou' | 'admin'>('landing');
@@ -192,6 +169,7 @@ const App: React.FC = () => {
 
         return () => window.removeEventListener('hashchange', handleHashChange);
     }, [page]);
+
 
     const handleSignupSuccess = useCallback(() => {
         window.scrollTo(0, 0);
