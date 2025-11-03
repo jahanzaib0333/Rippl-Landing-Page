@@ -1,0 +1,5 @@
+{
+  "name": "Rippl Landing Page",
+  "description": "A standalone landing page to collect email signups for the Rippl app waitlist. The page explains the app's value proposition, showcases its features, and converts visitors into waitlist subscribers.",
+  "requestFramePermissions": []
+}
