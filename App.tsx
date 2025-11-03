@@ -1,48 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import LandingPage from './components/LandingPage';
+import AdminPage from './components/Admin';
+import { CheckmarkIcon } from './components/icons';
 
-// TEMPORARY COMPONENTS - Replace these with your actual component files later
-const LandingPage: React.FC<{ onSignupSuccess: () => void }> = ({ onSignupSuccess }) => {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Landing Page Placeholder</h1>
-        <p className="mb-4">Your LandingPage component will appear here once you create the file.</p>
-        <button 
-          onClick={onSignupSuccess}
-          className="bg-blue-500 text-white px-6 py-3 rounded"
-        >
-          Continue to Thank You Page
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const AdminPage: React.FC<{ onGoHome: () => void }> = ({ onGoHome }) => {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md text-center">
-        <h1 className="text-2xl font-bold mb-4">Admin Panel Placeholder</h1>
-        <p className="mb-4">Your AdminPage component will appear here once you create the file.</p>
-        <button 
-          onClick={onGoHome}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          Back to Home
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const CheckmarkIcon: React.FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-    <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-// END TEMPORARY COMPONENTS
-
-// YOUR ORIGINAL CODE BELOW - UNCHANGED
 const Confetti: React.FC = () => {
     const confettiColors = ['#fde047', '#86efac', '#818cf8', '#f472b6'];
     const confettiCount = 50;
